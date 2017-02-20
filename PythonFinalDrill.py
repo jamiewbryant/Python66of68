@@ -95,6 +95,7 @@ root.resizable(width=NO, height=NO)
 
 #Pulls last update time from table
 c.execute('SELECT max(lastUpdated) FROM updateTime')
+#c.execute('SELECT * FROM updateTime ORDER BY lastUpdated DESC LIMIT 1 OFFSET 1')
 max_id=StringVar()
 max_id.set(c.fetchone()[0])
 
