@@ -96,7 +96,7 @@ root.resizable(width=NO, height=NO)
 #Pulls last update time from table
 c.execute('SELECT max(lastUpdated) FROM updateTime')
 max_id=StringVar()
-max_id.set("Last Update "+c.fetchone()[0])
+max_id.set(c.fetchone()[0])
 
 #Label displays last update
 label3=Label(root, textvariable=max_id, fg='Red').grid(row=5,column=0)
